@@ -275,18 +275,18 @@ AgregarVariables  <- function( dataset )
   dataset[ , prom_transf_em := mtransferencias_emitidas / ctransferencias_emitidas ]
   dataset[ , prom_extraccion := mextraccion_autoservicio / cextraccion_autoservicio ]
   
-  dataset[ , visa_consumo_vs_limite := visa_Visa_mconsumototal / Visa_mlimitecompra ]
-  dataset[ , visa_pago_vs_saldo := visa_Visa_mpagado / Visa_msaldototal ]
-  dataset[ , visa_pago_vs_saldo_pesos := visa_Visa_mpagospesos / Visa_msaldopesos ]
-  dataset[ , visa_pago_vs_saldo_usd := visa_Visa_mpagosdolares / Visa_msaldodolares ]
-  dataset[ , visa_prom_consumo := visa_Visa_mconsumototal / Visa_cconsumos ]
+  dataset[ , visa_consumo_vs_limite := Visa_mconsumototal / Visa_mlimitecompra ]
+  dataset[ , visa_pago_vs_saldo := Visa_mpagado / Visa_msaldototal ]
+  dataset[ , visa_pago_vs_saldo_pesos := Visa_mpagospesos / Visa_msaldopesos ]
+  dataset[ , visa_pago_vs_saldo_usd := Visa_mpagosdolares / Visa_msaldodolares ]
+  dataset[ , visa_prom_consumo := Visa_mconsumototal / Visa_cconsumos ]
   
   
-  dataset[ , master_consumo_vs_limite := visa_Master_mconsumototal / Master_mlimitecompra ]
-  dataset[ , master_pago_vs_saldo := visa_Master_mpagado / Master_msaldototal ]
-  dataset[ , master_pago_vs_saldo_pesos := visa_Master_mpagospesos / Master_msaldopesos ]
-  dataset[ , master_pago_vs_saldo_usd := visa_Master_mpagosdolares / Master_msaldodolares ]
-  dataset[ , master_prom_consumo := visa_Master_mconsumototal / Master_cconsumos ]
+  dataset[ , master_consumo_vs_limite := Master_mconsumototal / Master_mlimitecompra ]
+  dataset[ , master_pago_vs_saldo := Master_mpagado / Master_msaldototal ]
+  dataset[ , master_pago_vs_saldo_pesos := Master_mpagospesos / Master_msaldopesos ]
+  dataset[ , master_pago_vs_saldo_usd := Master_mpagosdolares / Master_msaldodolares ]
+  dataset[ , master_prom_consumo := Master_mconsumototal / Master_cconsumos ]
   
   dataset[ , prom_credpers := mprestamos_personales / cprestamos_personales ]
   dataset[ , prom_credpren := mprestamos_prendarios / cprestamos_prendarios ]
